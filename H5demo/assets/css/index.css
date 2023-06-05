@@ -1,0 +1,554 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: #000;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    height: 600px;
+    background-color: rgb(245, 245, 245);
+}
+
+.bottowBanner {
+    position: fixed;
+    top: 100%;
+    width: 100%;
+    height: 7.6%;
+    max-width: 540px;
+    min-width: 320px;
+    transform: translate(0, -100%);
+    background-color: #fff;
+}
+
+.bottowBanner .icon {
+    text-align: center;
+    line-height: 2.4rem;
+}
+
+.bottowBanner .icon-on {
+    color: #1E9FFF;
+}
+
+.bottowBanner .iconcha {
+    font-size: .16rem;
+    line-height: .12rem;
+}
+
+.hidden {
+    display: none;
+}
+
+[class^='body'] {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.search-index {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 55px;
+    width: 100%;
+    max-width: 540px;
+    min-width: 320px;
+    background-color: rgb(245, 245, 245);
+    z-index: 1;
+}
+
+.search-index .search {
+    position: relative;
+    flex: 1;
+    height: 32px;
+    border-radius: 32px;
+    margin: 12px 10px 0;
+    line-height: 32px;
+    padding-left: 35px;
+    color: #aaa;
+    background-color: #ddd;
+    font-size: 14px;
+}
+
+.search-index .search::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 13px;
+    width: 18px;
+    height: 18px;
+    background: url(../image/search.png) no-repeat;
+    background-size: 18px 18px;
+}
+
+.search-index .user {
+    width: 44px;
+    height: 50px;
+    padding-right: 6px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 60px;
+    font-size: 14px;
+    /* background-color: purple; */
+}
+
+.search-index .user a {
+    color: rgb(0, 134, 246);
+}
+
+.bodyReadRoom .roomBook {
+    margin: 60px 10px 0;
+    height: 305px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.bodyReadRoom .roomBook .roomName {
+    margin: 0 auto;
+    width: 75%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.bodyReadRoom .roomBook .roomName::after {
+    content: '切换阅览室';
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #aaa;
+}
+
+.bodyReadRoom .roomBook .checkedBook {
+    margin: 0 15px 0;
+    height: 180px;
+    border-bottom: 1px solid #eee;
+}
+
+.bodyReadRoom .roomBook .checkedBook .book {
+    float: left;
+    margin: 20px 20px 0 5px;
+    width: 90px;
+    height: 135px;
+    background: url('../upload/毛选.jpg') 0 0 no-repeat;
+    background-size: 90px 135px;
+}
+
+.bodyReadRoom .roomBook .checkedBook .bookInformation {
+    float: left;
+    margin-top: 30px;
+}
+
+.bodyReadRoom .roomBook .checkedBook .bookInformation .bookName {
+    font-weight: 500;
+}
+
+.bodyReadRoom .roomBook .checkedBook .bookInformation .bookName a {
+    margin-left: 15px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.bodyReadRoom .roomBook .checkedBook .bookInformation .bookProgress {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.bodyReadRoom .roomBook .checkedBook .bookInformation .readProgress {
+    float: left;
+    margin-top: 10px;
+    font-weight: normal;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.bodyReadRoom .roomBook .readBtn {
+    width: 80%;
+    margin: 18px 10%!important;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+.bodyReadRoom .roomBook .readBtn button {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.bodyReadRoom .members {
+    margin: 15px 10px 0;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.bodyReadRoom .members>div:first-child {
+    margin: 0 15px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.bodyReadRoom .members>div:first-child::after {
+    content: '更多成员';
+    float: right;
+    font-size: 12px;
+    line-height: 40px;
+    font-weight: normal;
+    color: #aaa;
+}
+
+.bodyReadRoom .members .avatars {
+    height: 60px;
+}
+
+.bodyReadRoom .members .avatars [class^='avatar'] {
+    float: left;
+    width: 20%;
+    height: 60px;
+    text-align: center;
+}
+
+.bodyReadRoom .members .avatars .avatar1 div:first-child {
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: url('../upload/avatar1.jpg') 0 0 no-repeat;
+    background-size: 40px 40px;
+}
+
+.bodyReadRoom .members .avatars .avatar1 div:last-child {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.bodyReadRoom .members .avatars .avatar2 div:first-child {
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: url('../upload/avatar2.jpg') 0 0 no-repeat;
+    background-size: 40px 40px;
+}
+
+.bodyReadRoom .members .avatars .avatar2 div:last-child {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.bodyReadRoom .members .avatars .avatar3 div:first-child {
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: url('../upload/avatar3.jpg') 0 0 no-repeat;
+    background-size: 40px 40px;
+}
+
+.bodyReadRoom .members .avatars .avatar3 div:last-child {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.bodyReadRoom .functions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    margin: 15px 10px 0;
+    height: 100px;
+}
+
+.bodyReadRoom .functions [class^=function] {
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.bodyReadRoom .functions .function1 div:first-child {
+    margin: 12px auto 3px;
+    width: 36px;
+    height: 36px;
+    background: url('../image/邀请好友.png') 0 0 no-repeat;
+    background-size: 36px 36px;
+}
+
+.bodyReadRoom .functions .function2 div:first-child {
+    margin: 12px auto 3px;
+    width: 36px;
+    height: 36px;
+    background: url('../image/笔记本.png') -8px -10px no-repeat;
+    background-size: 60px 60px;
+}
+
+.bodyReadRoom .functions .function3 div:first-child {
+    margin: 12px auto 3px;
+    width: 36px;
+    height: 36px;
+    background: url('../image/好友进度.png') 0 0 no-repeat;
+    background-size: 36px 36px;
+}
+
+.bodyReadRoom .functions .function4 div:first-child {
+    margin: 12px auto 3px;
+    width: 36px;
+    height: 36px;
+    background: url('../image/解散.png') 0 0 no-repeat;
+    background-size: 36px 36px;
+}
+
+.bodyReadRoom .functions .function1 div:last-child {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.bodyReadRoom .functions .function2 div:last-child {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.bodyReadRoom .functions .function3 div:last-child {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.bodyReadRoom .functions .function4 div:last-child {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.layui-progress-text {
+    display: none;
+}
+
+.bodyMe {
+    font-size: .2133rem;
+    font-weight: 400;
+}
+
+.msg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+}
+
+.msg .message {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 20px;
+}
+
+.msg .msgFont {
+    position: absolute;
+    top: 16px;
+    left: 30px;
+    font-size: 16px;
+}
+
+.msg .set {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    font-size: 20px;
+}
+
+.avatar {
+    margin: 60px 15px 0;
+    height: 60px;
+}
+
+.avatar .img {
+    float: left;
+    margin-right: 15px;
+    height: 60px;
+    width: 60px;
+    border-radius: 25px;
+    background: url('../upload/avatar.jpg') no-repeat;
+    background-size: 100% auto;
+    overflow: hidden;
+}
+
+.avatar .information {
+    float: left;
+}
+
+.avatar .information .id {
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.avatar .information .resume {
+    margin-top: 7px;
+    color: #bbb;
+}
+
+.avatar .sets {
+    float: right;
+    margin-top: 18px;
+    height: 24px;
+    width: 24px;
+    background: url('../image/chevron_right.png') 0 0 no-repeat;
+    background-size: 24px auto;
+}
+
+.account,
+.friends,
+.reading,
+.settings {
+    margin: 20px 10px -10px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.account {
+    height: 120px;
+}
+
+.friends {
+    height: 180px;
+}
+
+.reading {
+    height: 120px;
+}
+
+.settings {
+    height: 120px;
+    margin: 20px 10px 4rem!important;
+}
+
+.walletBox {
+    width: 100%;
+}
+
+.account .wallet,
+.account .readTime,
+.friends .wallet,
+.friends .follow,
+.friends .friend,
+.friends .rank,
+.reading .notes,
+.reading .readRecord,
+.settings .help,
+.settings .set {
+    float: left;
+    margin: 15px 10px 0 15px;
+    width: 30px;
+    height: 30px;
+}
+
+.account .wallet {
+    background: url('../image/钱包.png') no-repeat;
+    background-size: 100% auto;
+}
+
+.account .money {
+    float: right;
+}
+
+.account .money div:first-child {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.account .money div:first-child span,
+.account .time span,
+.friends .follower span,
+.friends .readingNow span,
+.friends .readingRank span,
+.reading .readingBook span {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.account .money div:last-child {
+    margin-top: 5px;
+    color: #bbb;
+}
+
+.account .readTime {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+    background: url('../image/时钟.png') no-repeat;
+    background-size: 100% auto;
+}
+
+.account .time,
+.friends .follower,
+.friends .readingNow,
+.friends .readingRank,
+.reading .readingBook {
+    float: right;
+    margin-right: 10px;
+    margin-top: 23px;
+}
+
+.friends .friend {
+    border-radius: 15px;
+    background: url('../image/朋友.png') no-repeat;
+    background-size: 100% auto;
+    overflow: hidden;
+}
+
+.friends .follow {
+    border-radius: 15px;
+    background: url('../image/关注.png') -4px -4px no-repeat;
+    background-size: 38px auto;
+    overflow: hidden;
+}
+
+.friends .rank {
+    border-radius: 15px;
+    background: url('../image/排行榜.png') -5px -5px no-repeat;
+    background-size: 40px auto;
+    overflow: hidden;
+}
+
+.reading .notes {
+    background: url('../image/笔记.png') -5px -5px no-repeat;
+    background-size: 40px auto;
+}
+
+.reading .readRecord {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    background: url('../image/历史记录.png') no-repeat;
+    background-size: 100% auto;
+}
+
+.settings .help {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: url('../image/帮助.png') no-repeat;
+    background-size: 100% auto;
+}
+
+.settings .set {
+    margin-left: 13px;
+    border-radius: 15px;
+    background: url('../image/设置.png') -5px -5px no-repeat;
+    background-size: 40px auto;
+    overflow: hidden;
+}

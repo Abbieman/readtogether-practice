@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>主页</title>
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <script src="./assets/lib/jquery.js"></script>
+    <script src="./assets/lib/layui/layui.js"></script>
+</head>
+
+<body>
+    <!-- 底部导航 -->
+    <div class="bottowBanner">
+        <div class="layui-row">
+            <div class="layui-col-xs3 icon">
+                <i class="layui-icon layui-icon-read" style="font-size: 24px; display:none" id="bookLib"></i>
+                <i class="layui-icon layui-icon-read layui-anim layui-anim-scaleSpring" style="font-size: 24px; color: #1E9FFF;" id="bookLibOn"></i>
+                <div class="iconcha icon-on">书城</div>
+            </div>
+            <div class=" layui-col-xs3 icon">
+                <i class="layui-icon layui-icon-cols" style="font-size: 24px;" id="bookShelf"></i>
+                <i class="layui-icon layui-icon-cols layui-anim layui-anim-scaleSpring" style="font-size: 24px; color: #1E9FFF; display:none" id="bookShelfOn"></i>
+                <div class="iconcha">书架</div>
+            </div>
+            <div class="layui-col-xs3 icon">
+                <i class="layui-icon layui-icon-home" style="font-size: 24px;" id="readRoom"></i>
+                <i class="layui-icon layui-icon-home layui-anim layui-anim-scaleSpring" style="font-size: 24px; color: #1E9FFF; display:none" id="readRoomOn"></i>
+                <div class="iconcha">阅览室</div>
+            </div>
+            <div class="layui-col-xs3 icon">
+                <i class="layui-icon layui-icon-user" style="font-size: 24px;" id="me"></i>
+                <i class="layui-icon layui-icon-user layui-anim layui-anim-scaleSpring" style="font-size: 24px; color: #1E9FFF; display:none" id="meOn"></i>
+                <div class="iconcha">我的</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 书城页面 -->
+    <div class="bodyLib" id="bookLibBody">皇帝的书城</div>
+
+    <!-- 书架页面 -->
+    <div class="bodyShelf hidden" id="bookShelfBody">皇帝的书架</div>
+
+    <!-- 阅览室窗口 -->
+    <div class="bodyReadRoom hidden" id="readRoomBody">
+        <div class="search-index">
+            <div class="search">选择一本有趣的书吧~</div>
+            <div class="user"><a href="#">书城</a></div>
+        </div>
+        <div class="roomBook">
+            <div class="roomName">
+                学习新思想
+            </div>
+            <div class="checkedBook">
+                <div class="book"></div>
+                <div class="bookInformation layui-col-xs7">
+                    <div class="bookName">毛泽东选集<a href="./chooseBook.html">修改</a></div>
+                    <div class="layui-progress bookProgress" lay-showPercent="false">
+                        <div class="layui-progress-bar layui-bg-orange" lay-percent="80%"></div>
+                    </div>
+                    <div class="readProgress">阅读进度：80.00%</div>
+                </div>
+            </div>
+            <div class="readBtn">
+                <button type="button" class="layui-btn layui-btn-normal">开始阅读吧~</button>
+            </div>
+        </div>
+        <div class="members">
+            <div>阅览室成员</div>
+            <div class="avatars">
+                <div class="avatar1">
+                    <div></div>
+                    <div>狗怀</div>
+                </div>
+                <div class="avatar2">
+                    <div></div>
+                    <div>蒋姐</div>
+                </div>
+                <div class="avatar3">
+                    <div></div>
+                    <div>已殉职</div>
+                </div>
+                <div class="avatar1">
+                    <div></div>
+                    <div>狗怀</div>
+                </div>
+                <div class="avatar2">
+                    <div></div>
+                    <div>蒋姐</div>
+                </div>
+            </div>
+        </div>
+        <div class="functions">
+            <div class="function1">
+                <div></div>
+                <div>邀请好友</div>
+            </div>
+            <div class="function2">
+                <div></div>
+                <div>查看笔记</div>
+            </div>
+            <div class="function3">
+                <div></div>
+                <div>好友进度</div>
+            </div>
+            <div class="function4">
+                <div></div>
+                <div>解散阅览室</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 个人主页窗口 -->
+    <div class="bodyMe hidden" id="meBody">
+        <div class="msg">
+            <i class="layui-icon layui-icon-notice message"></i>
+            <span class="msgFont" style="font-size:16px; line-height:24px; margin-left:3px;">1</span>
+            <i class="layui-icon layui-icon-set set"></i>
+        </div>
+
+        <div class="avatar">
+            <div class="img"></div>
+            <div class="information">
+                <div class="id">该成员已殉职</div>
+                <div class="resume">编辑个人资料</div>
+            </div>
+            <div class="sets"></div>
+        </div>
+
+        <div class="account">
+            <div style="height:60px;">
+                <div class="wallet"></div>
+                <div style="float:left; margin:18px 0 0 0; font-size:16px; font-weight:500;">账户</div>
+                <div class="money">
+                    <div>余额&nbsp;<span>1145.14</span></div>
+                    <div>书币&nbsp;0.00</div>
+                </div>
+            </div>
+            <div style="height:60px;">
+                <div class="readTime"></div>
+                <div style="float:left; margin:18px 0 0 0; font-size:16px; font-weight:500;">阅读时长</div>
+                <div class="time"><span>&nbsp;11&nbsp;</span>时<span>&nbsp;22&nbsp;</span>分钟</div>
+            </div>
+        </div>
+
+        <div class="friends">
+            <div style="height:60px;">
+                <div class="friend"></div>
+                <div style="float:left; margin:18px 0 0 0; font-size:16px; font-weight:500;">好友</div>
+                <div class="readingNow"><span>2</span>&nbsp;好友在读</div>
+            </div>
+            <div style="height:60px;">
+                <div class="follow"></div>
+                <div style="float:left; margin:18px 0 0 0; font-size:16px; font-weight:500;">关注</div>
+                <div class="follower"><span>33</span>&nbsp;人关注我</div>
+            </div>
+            <div style="height:60px;">
+                <div class="rank"></div>
+                <div style="float:left; margin:18px 0 0 0; font-size:16px; font-weight:500;">读书排行榜</div>
+                <div class="readingRank">第&nbsp;<span>2</span>&nbsp;名</div>
+            </div>
+        </div>
+
+        <div class="reading">
+            <div style="height:60px;">
+                <div class="notes"></div>
+                <div style="float:left; margin:18px 0 0 0; font-size:16px; font-weight:500;">笔记</div>
+            </div>
+            <div style="height:60px;">
+                <div class="readRecord"></div>
+                <div style="float:left; margin:18px 0 0 0; font-size:16px; font-weight:500;">阅读记录</div>
+                <div class="readingBook"><span>3</span>&nbsp;本在读</div>
+            </div>
+        </div>
+
+        <div class="settings">
+            <div style="height:60px;">
+                <div class="help"></div>
+                <div style="float:left; margin:18px 0 0 0; font-size:16px; font-weight:500;">帮助</div>
+            </div>
+            <div style="height:135px;">
+                <div class="set"></div>
+                <div style="float:left; margin:18px 0 0 0; font-size:16px; font-weight:500;">设置</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
